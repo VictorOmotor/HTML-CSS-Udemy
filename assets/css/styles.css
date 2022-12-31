@@ -1,0 +1,753 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin: 0 1.5rem;
+    justify-content: space-between;
+    padding: .6rem 0;
+}
+
+.udemy-logo {
+    height: 3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.search-area {
+    display: flex;
+    position: relative;
+}
+
+.form-container {
+    position: relative;
+}
+.search-input {
+    height: 3rem;
+    width: 35rem;
+    border: solid 1px;
+    border-radius: 100px;
+    background-color:#f7f9fa;
+}
+
+.search-label {
+    position: absolute;
+    top: 30%;
+    left: 12% ;
+}
+
+.search-button {
+    background-color: inherit;
+    border: none;
+    position: absolute;
+    top: 23%;
+    left: 5%;
+}
+.search-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.cart-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.sphere-icon {
+    height: 1rem;
+    width: 1.5rem;
+}
+
+.user-links {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.log-in #log-in {
+    border: solid 1px;
+    padding: .5rem 1.2rem;
+    font-weight: bold;
+}
+
+.sign-up #sign-up {
+    border: solid 1px;
+    padding: .6rem 1rem;
+    font-weight: bold;
+    background-color: #1c1d1f;
+    color: #fff;
+}
+
+.sphere-box {
+    border: solid 1px;
+    padding: .4rem;
+}
+
+.carousel {
+    position: relative;
+   
+    
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.75);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+.carousel-1-content {
+    background-color: #fff;
+    height: 11rem;
+    width: 27rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 16%;
+    left: 5%;
+    z-index: 1;
+}
+
+.content-heading {
+    font-size: 2.1rem;
+}
+
+.content-body {
+    font-size: 17px;
+}
+
+.below-carousel {
+    margin: 2rem 1.5rem 1rem;
+}
+
+#below-carousel-heading {
+    font-size: 2.5rem;
+}
+
+#below-carousel-text {
+    font-size: 1.4rem;
+}
+
+.courses {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #695d5d;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#python {
+    margin-left: 1.5rem;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.course-selection {
+    display: flex;
+    padding: 2rem;
+    margin: 1rem 1.5rem 3rem;
+    border: solid 1px #d1d7dc;
+    gap: 1.6rem;
+}
+
+.course-block {
+    width: 14.5rem;
+    line-height: 1.2;
+    
+}
+
+.course-block-img {
+    width: 100%;
+}
+
+#img2-img {
+    border: solid 1px #d1d7dc;
+}
+
+.star-icon {
+    height: 1rem;
+    width: 1rem;
+    fill: goldenrod;
+    
+}.course-block-heading {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.course-block-span {
+    font-size: small;
+    color: #695d5d;
+}
+
+.star-icon-container {
+    display: flex;
+    margin: 5px 0;
+}
+
+.star-rating {
+    font-weight: bold;
+    font-size: .95rem;
+    color: rgb(173, 128, 14);
+}
+
+.star-number {
+    font-size: small;
+    color: #695d5d;
+    margin-left: .3rem;
+}
+
+
+del {
+    color: #695d5d9a;
+}
+
+.quote-section {
+    background-color: #f7f9fa;
+   
+}
+
+.quote-section-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 3.5rem 1.5rem 1.5rem; 
+}
+
+.quote-box-container {
+    display: flex;
+    gap: 1.2rem;
+    padding: 0 1.5rem 3.2rem;
+}
+
+.quote-box {
+    border: solid 1px #d1d7dc;
+    background-color: white;
+    height: 21rem;
+    width: 25rem;
+    padding: 1.5rem;
+}
+
+.quote-box-paragraph {
+    font-size: 1.1rem;
+    color: #1c1d1f;
+    font-weight: 400;
+    line-height: 1.4;
+    width: 100%;
+    height: 8rem;
+}
+
+.quote-user {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.user-icon {
+    display: flex;
+    background-color: black;
+    border: solid 1px;
+    border-radius: 100%;
+    height: 2.2rem;
+    width: 2.2rem;
+    color: white;
+    font-size: .8rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    font-weight: 700;
+}
+
+.user-logo {
+    
+}
+
+.user-name {
+    position: absolute;
+    top: 10%;
+    left: 11.5%;
+    font-weight: bold;
+}
+
+.quote-box-footer {
+    margin-top: 1rem;
+}
+
+.play-icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+.play-icon {
+    height: 1rem;
+    width: 1rem;
+    fill: white;
+
+}
+
+.logo-box {
+    border-radius: 100%;
+    background-color: #5624d0;
+    height: 1.6rem;
+    width: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.play-span-link {
+    color: #5624d0;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    font-weight: bold;
+}
+
+.play-span-link:hover {
+    color: #280d6e;
+}
+
+.student-section-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 3.5rem 1.5rem 1rem; 
+}
+
+.student-selection {
+    display: flex;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+    
+    gap: 1.6rem;
+}
+
+.best-seller {
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(204, 184, 8, 0.459);
+    margin-top: .5rem;
+    padding: .2rem;
+}
+
+.trending-topic-section {
+    background-color: #f7f9fa;
+}
+
+.trending-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 3.5rem 1.5rem 1rem; 
+}
+
+.trending-section-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    height: 16rem;
+    margin: 0 1.5rem;
+}
+
+.trending-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.trending-block-heading {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.course {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.trending-links {
+    color: #5624d0;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.trending-links:hover {
+    color: #3508a5;
+    font-size: 1.1rem;
+    line-height: 1.1;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.course-numbers {
+    color: #695d5de7;
+    margin-top: .5rem;
+}
+
+.explore {
+    margin: 0 1.5rem;
+    border: solid 1px;
+    width: 10rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.instructor-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 4rem 15rem;
+}
+
+
+.instructor-block {
+margin-top: 5rem;
+width: 23rem;
+}
+
+.instructor-heading {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-button {
+    display: flex;
+    background-color: black;
+    width: 10.5rem;
+    height: 2.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructor-link {
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+.instructor-link:hover {
+    color: white;
+}
+
+.endorsement-box {
+    background-color: #eff4f7;
+    padding: 2rem;
+}
+
+.endorsement-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.endorsement-title-heading {
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.endorsement-title-span {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.endorsement-company-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.instructor-container2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 6rem;
+    margin: 4rem 15rem;
+}
+
+
+.instructor-block2 {
+margin-top: 6rem;
+width: 23rem;
+}
+
+.udemy-business-logo {
+    margin-bottom: 1rem;
+    width: 12rem;
+}
+
+.instructor-text2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-button2 {
+    display: flex;
+    background-color: black;
+    width: 10.5rem;
+    height: 2.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructor-link2 {
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+.instructor-link2:hover {
+    color: white;
+}
+
+.instructor-container3 {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin: 4rem 15rem;
+}
+
+
+.instructor-block3 {
+margin-top: 5rem;
+width: 23rem;
+}
+
+.instructor-heading3 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-text3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.instructor-button3 {
+    display: flex;
+    background-color: black;
+    width:8rem;
+    height: 2.8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructor-link3 {
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+.instructor-link3:hover {
+    color: white;
+}
+
+.footer-section {
+    background-color: black;
+    padding: 2rem 3rem;
+}
+
+.footer-container {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+  }
+  
+  /* .footer-column {
+    flex: 1;
+  } */
+  
+.footer-links {
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: bold;
+    color: white; 
+}
+
+.footer-links:hover {
+    color: white;
+    text-decoration: underline;
+  } 
+
+li {
+    margin-bottom: 1rem;
+}
+
+.web-icon-container {
+    border: solid 1px white;
+    height: 2.5rem;
+    width: 9rem;
+    display: flex;
+    padding: .6rem 1.3rem;
+    position: absolute;
+    right: 0;
+}
+
+#sphere-icon2 {
+    fill: white;
+}
+
+.web-language {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+  
+.logo-legal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.udemy-logo-2 {
+    height: 2rem;
+}
+
+.legal {
+    color: white;
+    font-size: 1rem;
+}
